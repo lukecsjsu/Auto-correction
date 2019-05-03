@@ -16,7 +16,7 @@ class hashTable:
 	def search(self, value):
 		key = hash(value) % len(self.table)    
 		bucket = self.table[key]
-		for i, v in enumerate(bucket):
+		for i, v in enumerate(bucket):	
 			if value == v:
 				return True
 		return False
@@ -39,7 +39,7 @@ def init(dict_path):
 		hash.insert(w)
 	return hash
 
-if __name__ == "__main__":
+def main():
 	hash = init(dict_path = "dict.txt")
 	print("complete")
 
@@ -47,10 +47,13 @@ if __name__ == "__main__":
 	while res != "":
 		res = res.strip()
 		# Check whether res exists in TST
-		find_w, _, _ = t.find(res)
-		if find_w == True:                                  # Exist
+		find_w = hash.search(res)
+		if find_w:                                  # Exist
 			print(res + " ——no spelling errors")
 		else:
-			print(res + " ——misspelled, it is recommended to change to the following words:")
-			res = input("Please enter a word (enter empty words to exit by default):")
+			print(res + " ——misspelled")
+		res = input("Please enter a word (enter empty words to exit by default):")
 	print("Exit")
+
+if __name__ == "__main__":
+	main()
