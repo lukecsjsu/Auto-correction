@@ -9,7 +9,7 @@ class TST:
 
     # Looking for the word in TST
     def find(self, word):
-        if word[-1] != "\0": word += "\0"
+        # if word[-1] != "\0": word += "\0"
         cur_node, pre_node = self.root, self.root
         word_i, find_w = 0, False
         while cur_node != None:                  # The root node has not been queried yet, and the query can continue
