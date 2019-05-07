@@ -5,6 +5,7 @@ Auto-correction is implemented with ternary search tree and hashing in this proj
 ### TST Class Diagram
 ![TST Class Diagram](images/TST.png)
 
+## Algorithms
 ### Lookup Algorithm
 ![Lookup Algo](images/Algo1.PNG)
 
